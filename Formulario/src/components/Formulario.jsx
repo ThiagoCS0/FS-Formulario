@@ -16,7 +16,10 @@ const MeuFormulario = () => {
 	const handleChange = (event) => { setFormulario({ ...formulario, [event.target.name]: event.target.value }) }
 	const handleSubmit = (event) => {
 		event.preventDefault(); const validarErros = validar();
-		if (Object.keys(validarErros).length == 0) { setEnviados(true); setErrors({}); } else { setEnviados(false); setErrors(validarErros); }
+		if (Object.keys(validarErros).length == 0) {
+			setEnviados(true); setErrors({});
+			const tmp = setInterval(() => { setEnviados(false); clearInterval(tmp) }, 3000);
+		} else { setEnviados(false); setErrors(validarErros); }
 	}
 
 	return (
