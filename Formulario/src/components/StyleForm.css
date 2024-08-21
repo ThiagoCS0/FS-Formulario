@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+* {
+	margin: 0;
+	border: 0;
+	padding: 0;
+	font-weight: 400;
+	user-select: none;
+	box-sizing: border-box;
+	-webkit-user-drag: none;
+	font-family: 'Lato', sans-serif;
+}
+
+html {
+	overflow: hidden;
+}
+
+body {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: Arial, Helvetica, sans-serif;
+	background: linear-gradient(to right top, #04A, #0DF);
+}
+
+h2 {
+	color: #FFF;
+	margin: 20px 0;
+	padding-bottom: 10px;
+	border-bottom: 2px solid #0FF;
+}
+
+form {
+	gap: 15px;
+	width: 600px;
+	padding: 20px;
+	display: flex;
+	height: fit-content;
+	flex-direction: column;
+	box-shadow: 0px 0px 20px #0006;
+	background: linear-gradient(to right top, #08F, #0FF);
+}
+
+#dSenha {
+	gap: 15px;
+	display: flex;
+}
+
+label {
+	color: #FFF;
+	font-weight: bolder;
+}
+
+input {
+	width: 100%;
+	height: 40px;
+	color: #000;
+	outline: none;
+	padding: 4px 10px;
+	font-size: x-large;
+	min-height: fit-content;
+	background-color: #FFF5;
+}
+
+button {
+	width: 100%;
+	height: 40px;
+	color: #000;
+	cursor: pointer;
+	background: #0FF;
+	font-weight: bolder;
+}
+
+p {
+	color: #FFF;
+	padding: 2px 4px;
+	text-align: center;
+	background-color: #F008;
+}
+
+#sucesso {
+	padding: 8px;
+	background-color: #0A4;
+}
