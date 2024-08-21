@@ -7,7 +7,7 @@ const MeuFormulario = () => {
 	const validar = () => {
 		const novosErros = {}
 		if (!formulario.nome) { novosErros.nome = "Campo obrigatório" }
-		if (!formulario.email) { novosErros.email = "Campo obrigatório" } else if (!/\S+@\S+\S+.\S+/.test(formulario.email)) { novosErros.email = "Email Inválido" }
+		if (!formulario.email) { novosErros.email = "Campo obrigatório" } else if (!/\S+@\S+\.\S/.test(formulario.email)) { novosErros.email = "Email Inválido" }
 		if (!formulario.senha) { novosErros.senha = "Campo obrigatório" } else if (formulario.senha.length < 8) { novosErros.senha = "A senha deve ter 8 dígitos ou mais" }
 		if (!formulario.confSenha) { novosErros.confSenha = "Campo obrigatório" } else if (formulario.confSenha != formulario.senha) { novosErros.confSenha = "As duas senhas deve ser iguais" }
 		return novosErros
@@ -16,7 +16,7 @@ const MeuFormulario = () => {
 	const handleChange = (event) => { setFormulario({ ...formulario, [event.target.name]: event.target.value }) }
 	const handleSubmit = (event) => {
 		event.preventDefault(); const validarErros = validar();
-		if (Object.keys(validarErros).length == 0) { setEnviados(true); } else { setErrors(validarErros); }
+		if (Object.keys(validarErros).length == 0) { setEnviados(true); setErrors({}); } else { setEnviados(false); setErrors(validarErros); }
 	}
 
 	return (
